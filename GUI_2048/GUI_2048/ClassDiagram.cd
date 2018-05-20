@@ -1,29 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="GUI_2048.App" Collapsed="true">
-    <Position X="13.5" Y="6.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>App.xaml.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="GUI_2048.Board">
-    <Position X="3" Y="3" Width="1.5" />
+    <Position X="3" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAABQAAAEAEAAAAAAAAAAAAACIAAAAAAAACAABAAgBA=</HashCode>
       <FileName>Board.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="GUI_2048.Informacje" BaseTypeListCollapsed="true">
-    <Position X="9.75" Y="11" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Informacje.xaml.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" Collapsed="true" />
-  </Class>
   <Class Name="GUI_2048.Key">
-    <Position X="3" Y="6.5" Width="1.5" />
+    <Position X="12.25" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAABAAAAAAQAAAAMgGAAAAAIAAAgDAAAAAAAAAAAAAA=</HashCode>
       <FileName>Key.cs</FileName>
@@ -32,79 +17,69 @@
   <Class Name="GUI_2048.MainWindow" BaseTypeListCollapsed="true">
     <Position X="9.75" Y="3" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAQAAAACAAAgAACAAAAAAAAAAAEAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAEAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAACABAAA=</HashCode>
       <FileName>MainWindow.xaml.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="GUI_2048.Plansza4x4" BaseTypeListCollapsed="true">
-    <Position X="5.75" Y="3.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>ACADAAIAAAAAAERAAABAAAAAAAAAAAAAAAAAAKAAAAA=</HashCode>
-      <FileName>Plansza4x4.xaml.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" Collapsed="true" />
-  </Class>
-  <Class Name="GUI_2048.Plansza6x6" BaseTypeListCollapsed="true">
-    <Position X="5.75" Y="7.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>ACADAAAAAAACAERAAABAAAAAAAAAAAAAAAAAAKAAAAA=</HashCode>
-      <FileName>Plansza6x6.xaml.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" Collapsed="true" />
-  </Class>
-  <Class Name="GUI_2048.Plansza8x8" BaseTypeListCollapsed="true">
-    <Position X="5.75" Y="11.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>ACADAAAAAAACAERAAABAAAAAAAAAAAAAAAAAAKAAAAA=</HashCode>
-      <FileName>Plansza8x8.xaml.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" Collapsed="true" />
-  </Class>
-  <Class Name="GUI_2048.Sterowanie" BaseTypeListCollapsed="true">
-    <Position X="9.75" Y="8.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Sterowanie.xaml.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" Collapsed="true" />
-  </Class>
   <Class Name="GUI_2048.User">
-    <Position X="3" Y="1" Width="1.5" />
+    <Position X="3" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAIgAAAAAAAAA=</HashCode>
       <FileName>User.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="GUI_2048.WyborPlanszy" BaseTypeListCollapsed="true">
-    <Position X="9.75" Y="6" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAACAAAAABAAAAAAAAEAAAAAABAAAAAAAAA=</HashCode>
-      <FileName>WyborPlanszy.xaml.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" Collapsed="true" />
-  </Class>
-  <Class Name="GUI_2048.Languages.ResourceMain" Collapsed="true">
-    <Position X="13.5" Y="5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAIAACAAAAAAAAABEAAAgQAAAAAAAAAIAAAAAIA=</HashCode>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="GUI_2048.Properties.Resources" Collapsed="true">
-    <Position X="13.5" Y="4.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="GUI_2048.Properties.Settings" Collapsed="true">
-    <Position X="13.5" Y="5.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
-    </TypeIdentifier>
-  </Class>
   <Class Name="System.Windows.Window" Collapsed="true">
     <Position X="7.5" Y="0.75" Width="1.5" />
     <TypeIdentifier />
+  </Class>
+  <Class Name="GUI_2048.Board4x4">
+    <Position X="5.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACADAAAAAAAAAERAAABAAAAAAAAAAAAAAAAAAKAAAAA=</HashCode>
+      <FileName>Board4x4.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GUI_2048.ChoiceBoard">
+    <Position X="9.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAAAAgAAAAAAAAAACCAAAAA=</HashCode>
+      <FileName>ChoiceBoard.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GUI_2048.Board6x6">
+    <Position X="5.75" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACADAAAAAAAAAERAAABAAAAAAAAAAAAAAAAAAKAAAAA=</HashCode>
+      <FileName>Board6x6.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GUI_2048.Control">
+    <Position X="9.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>Control.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GUI_2048.Board8x8">
+    <Position X="5.75" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACADAAAAAAAAAERAAABAAAAAAAAAAAAAAAAAAKAAAAA=</HashCode>
+      <FileName>Board8x8.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GUI_2048.Information">
+    <Position X="9.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>Information.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
