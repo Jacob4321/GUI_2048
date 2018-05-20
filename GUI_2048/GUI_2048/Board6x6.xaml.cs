@@ -16,26 +16,12 @@ using System.Windows.Shapes;
 namespace GUI_2048
 {
     /// <summary>
-    /// Interaction logic for Plansza4x4.xaml
+    /// Interaction logic for Board4x4.xaml
     /// </summary>
-    public partial class Plansza6x6 : Window
+    public partial class Board6x6 : Window
     {
-        /*
-        public int pause; // zmienna tymczasowa
-        
-        public static int menu, sizeBoard;
-        public int button;             //klawisz
-        public int historyXcoordinate1, historyYcoordinate1;
-        public int historyXcoordinate2, historyYcoordinate2;
-        public static string exitt;
-  
-        */
-
-
-
         public System.Windows.Media.SolidColorBrush ChangeBackground(int a, int b)
         {
-            //var checkBg = Brushes.White; 
             switch (User.board[a, b])
             {
                 case 0: return (SolidColorBrush)(new BrushConverter().ConvertFrom("#ffffff"));
@@ -184,11 +170,11 @@ namespace GUI_2048
             }
         }
 
-        private void KeyDown_Event(object sender, KeyEventArgs e)   // aktualizacja danych
+        private void KeyDown_Event(object sender, KeyEventArgs e)   // data update
         {
 
 
-            Key.Checkclear(sizeBoard);   // sprawdzenie czy sa puste pola 
+            Key.Checkclear(sizeBoard);   // checking if there are empty fields
 
             if (Key.board_clear == false)
             {
@@ -198,44 +184,44 @@ namespace GUI_2048
                 this.Close();
             }
 
-            Key.CheckKey(sizeBoard, e);    // sprawdzanie klawisza i wykonanie ruchu 
+            Key.CheckKey(sizeBoard, e);    // checking clicks and moving
 
-            if (Key.check_move == true)         // Jesli wykonano jakis ruch
+            if (Key.check_move == true)
             {
-                Board.RandValue();    // losuje wartość 2 lub 4
-                Board.RandCoordinates(sizeBoard);     // losowanie wspolrzednych nowej liczby      
+                Board.RandValue();    // draws a value of 2 or 4
+                Board.RandCoordinates(sizeBoard);     // drawing of coordinates of a new number      
             }
 
-            Board.ConvertBytes(sizeBoard);   // zamiana liczb na bajty
+            Board.ConvertBytes(sizeBoard);   // conversion of numbers into bytes
 
-            UpdateBoard();      // Wprowadź nowe wartości do tablicy
-            CheckAchiv(sizeBoard);      // wyswietlenie Achivmenta
+            UpdateBoard();      // Enter new values ​​into the table
+            CheckAchiv(sizeBoard);      // displaying achievement
         }
 
 
-        public Plansza6x6()     // Inicjalizacja GUI
+        public Board6x6()     // initialization GUI
         {
             InitializeComponent();
 
 
             sizeBoard = 5;
 
-            User.CreateBoard(sizeBoard);     // wypełnienie tablicy zerami
+            User.CreateBoard(sizeBoard);     // filling the table with zeros
             for (int i = 0; i < 2; i++)
             {
-                Board.RandValue();    // losuje wartość 2 lub 4
-                Board.RandCoordinates(sizeBoard);     // losowanie wspolrzednych nowej liczby
+                Board.RandValue();    // draws a value of 2 or 4
+                Board.RandCoordinates(sizeBoard);     // drawing of coordinates of a new number 
             }
 
-            Board.ConvertBytes(sizeBoard);   // zamiana liczba na bajty
-            UpdateBoard();    // wyswietlenie zawartosci tablicy
+            Board.ConvertBytes(sizeBoard);   // conversion of numbers into bytes
+            UpdateBoard();    // displaying the content of the table
 
         }
 
-        private void wyjscie(object sender, RoutedEventArgs e)
+        private void exit(object sender, RoutedEventArgs e)
         {
-            MainWindow wyjscie = new MainWindow();
-            wyjscie.Show();
+            MainWindow exit = new MainWindow();
+            exit.Show();
             this.Close();
         }
     }

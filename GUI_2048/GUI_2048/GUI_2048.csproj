@@ -54,8 +54,8 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Board.cs" />
-    <Compile Include="Informacje.xaml.cs">
-      <DependentUpon>Informacje.xaml</DependentUpon>
+    <Compile Include="Information.xaml.cs">
+      <DependentUpon>Information.xaml</DependentUpon>
     </Compile>
     <Compile Include="Key.cs" />
     <Compile Include="Languages\ResourceMain.en.Designer.cs">
@@ -68,28 +68,28 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ResourceMain.pl.resx</DependentUpon>
     </Compile>
-    <Compile Include="Plansza4x4.xaml.cs">
-      <DependentUpon>Plansza4x4.xaml</DependentUpon>
+    <Compile Include="Board4x4.xaml.cs">
+      <DependentUpon>Board4x4.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Plansza6x6.xaml.cs">
-      <DependentUpon>Plansza6x6.xaml</DependentUpon>
+    <Compile Include="Board6x6.xaml.cs">
+      <DependentUpon>Board6x6.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Plansza8x8.xaml.cs">
-      <DependentUpon>Plansza8x8.xaml</DependentUpon>
+    <Compile Include="Board8x8.xaml.cs">
+      <DependentUpon>Board8x8.xaml</DependentUpon>
     </Compile>
     <Compile Include="Languages\ResourceMain.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ResourceMain.resx</DependentUpon>
     </Compile>
-    <Compile Include="Sterowanie.xaml.cs">
-      <DependentUpon>Sterowanie.xaml</DependentUpon>
+    <Compile Include="Control.xaml.cs">
+      <DependentUpon>Control.xaml</DependentUpon>
     </Compile>
     <Compile Include="User.cs" />
-    <Compile Include="WyborPlanszy.xaml.cs">
-      <DependentUpon>WyborPlanszy.xaml</DependentUpon>
+    <Compile Include="ChoiceBoard.xaml.cs">
+      <DependentUpon>ChoiceBoard.xaml</DependentUpon>
     </Compile>
-    <Page Include="Informacje.xaml">
+    <Page Include="Information.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -105,23 +105,23 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Plansza4x4.xaml">
+    <Page Include="Board4x4.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Plansza6x6.xaml">
+    <Page Include="Board6x6.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Plansza8x8.xaml">
+    <Page Include="Board8x8.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Sterowanie.xaml">
+    <Page Include="Control.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="WyborPlanszy.xaml">
+    <Page Include="ChoiceBoard.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

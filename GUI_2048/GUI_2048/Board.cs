@@ -11,8 +11,8 @@ namespace GUI_2048
     {
        
         public int randNumber = 0;
-        public int rand1 = 2;      // pierwsza losowa liczba
-        public int rand2 = 4;      // druga losowa liczba
+        public int rand1 = 2;      // the first random number
+        public int rand2 = 4;      // the second random number
         public static int coordinateXnumber1, coordinateYnumber1;
         public static string[,] output = new string[9, 9];
 
@@ -20,7 +20,6 @@ namespace GUI_2048
 
         public void ConvertBytes(int _sizeboard)
         {
-            // Dictionary zamiast switch
             for (int i = 0; i <= _sizeboard; i += 1)
             {
                 for (int j = 0; j <= _sizeboard; j += 1)

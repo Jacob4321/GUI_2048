@@ -15,19 +15,19 @@ using System.Windows.Shapes;
 namespace GUI_2048
 {
     /// <summary>
-    /// Interaction logic for Sterowanie.xaml
+    /// Interaction logic for Information.xaml
     /// </summary>
-    public partial class Sterowanie : Window
+    public partial class Information : Window
     {
-        public Sterowanie()
+        public Information()
         {
             InitializeComponent();
         }
 
-        private void wyjscie(object sender, RoutedEventArgs e)
+        private void exit(object sender, RoutedEventArgs e)
         {
-            MainWindow wyjscie = new MainWindow();
-            wyjscie.Show();
+            MainWindow exit = new MainWindow();
+            exit.Show();
             this.Close();
         }
     }

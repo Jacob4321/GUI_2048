@@ -1,4 +1,4 @@
-﻿<Window x:Class="GUI_2048.WyborPlanszy"
+﻿<Window x:Class="GUI_2048.ChoiceBoard"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -25,7 +25,7 @@
             <ColumnDefinition Width="100"/>
         </Grid.ColumnDefinitions>
  
-        <Button Click="Plansza4x4" Grid.Column="1" HorizontalAlignment="Left" Height="40" FontSize="20" Grid.Row="1" VerticalAlignment="Top" Width="70">
+        <Button Click="Board4x4" Grid.Column="1" HorizontalAlignment="Left" Height="40" FontSize="20" Grid.Row="1" VerticalAlignment="Top" Width="70">
             <Button.Background>
                 <ImageBrush ImageSource="Images/WyborPlanszy_button_4x4.png"/>
             </Button.Background>
@@ -36,7 +36,7 @@
             </TextBlock.Background>
         </TextBlock>
 
-        <Button Grid.Column="1" HorizontalAlignment="Left" Height="40" FontSize="20" Grid.Row="3" VerticalAlignment="Top" Width="70" Click="Plansza6x6">
+        <Button Grid.Column="1" HorizontalAlignment="Left" Height="40" FontSize="20" Grid.Row="3" VerticalAlignment="Top" Width="70" Click="Board6x6">
             <Button.Background>
                 <ImageBrush ImageSource="Images/WyborPlanszy_button_6x6.png"/>
             </Button.Background>
@@ -47,7 +47,7 @@
             </TextBlock.Background>
         </TextBlock>
 
-        <Button Grid.Column="1" HorizontalAlignment="Left" Height="40" FontSize="20" Grid.Row="5" VerticalAlignment="Top" Width="70" Click="Plansza8x8">
+        <Button Grid.Column="1" HorizontalAlignment="Left" Height="40" FontSize="20" Grid.Row="5" VerticalAlignment="Top" Width="70" Click="Board8x8">
             <Button.Background>
                 <ImageBrush ImageSource="Images/WyborPlanszy_button_8x8.png"/>
             </Button.Background>
@@ -58,7 +58,7 @@
             </TextBlock.Background>
         </TextBlock>
 
-        <Button Click="wyjscie" HorizontalAlignment="Left"  Margin="0,33,0,0" Grid.Row="6" Height="46" FontSize="20" VerticalAlignment="Top" Width="250" Grid.Column="1">
+        <Button Click="exit" HorizontalAlignment="Left"  Margin="0,33,0,0" Grid.Row="6" Height="46" FontSize="20" VerticalAlignment="Top" Width="250" Grid.Column="1">
             <Button.Background>
                 <ImageBrush ImageSource="Images/WyborPlanszy_button_powrot.png"/>
             </Button.Background>

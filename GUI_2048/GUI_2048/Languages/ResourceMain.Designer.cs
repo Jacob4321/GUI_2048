@@ -61,11 +61,11 @@ namespace GUI_2048.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Informacje.
+        ///   Looks up a localized string similar to Information.
         /// </summary>
         public static string Informacje {
             get {
-                return ResourceManager.GetString("Informacje", resourceCulture);
+                return ResourceManager.GetString("Information", resourceCulture);
             }
         }
         
@@ -88,20 +88,20 @@ namespace GUI_2048.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Sterowanie.
+        ///   Looks up a localized string similar to Control.
         /// </summary>
         public static string Sterowanie {
             get {
-                return ResourceManager.GetString("Sterowanie", resourceCulture);
+                return ResourceManager.GetString("Control", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Wyjscie.
+        ///   Looks up a localized string similar to exit.
         /// </summary>
         public static string Wyjscie {
             get {
-                return ResourceManager.GetString("Wyjscie", resourceCulture);
+                return ResourceManager.GetString("exit", resourceCulture);
             }
         }
     }

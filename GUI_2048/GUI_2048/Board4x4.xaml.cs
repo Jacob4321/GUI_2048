@@ -16,12 +16,12 @@ using System.Windows.Shapes;
 namespace GUI_2048
 {
     /// <summary>
-    /// Interaction logic for Plansza4x4.xaml
+    /// Interaction logic for Board4x4.xaml
     /// </summary>
-    public partial class Plansza4x4 : Window
+    public partial class Board4x4 : Window
     {
 
-        // wypelnienie tla kolorem w zaleznosci od liczby w danym polu
+        // filling the background with color depending on the number in the field
         public System.Windows.Media.SolidColorBrush ChangeBackground(int a, int b)
         {
             
@@ -65,7 +65,7 @@ namespace GUI_2048
         
         public void UpdateBoard()
         {
-            // wypelnienie tla tablicy kolorem 
+            // filling background with color
             area_00.Background = ChangeBackground(0,0);
             area_10.Background = ChangeBackground(1,0);
             area_20.Background = ChangeBackground(2,0);
@@ -87,7 +87,7 @@ namespace GUI_2048
             area_33.Background = ChangeBackground(3,3);
 
 
-            // wypelnienie tablicy liczbami
+            // filling the table with zeros
             cell_00.Text = Board.output[0, 0];
             cell_10.Text = Board.output[1, 0];
             cell_20.Text = Board.output[2, 0];
@@ -137,11 +137,11 @@ namespace GUI_2048
             }
         }
 
-        private void KeyDown_Event(object sender, KeyEventArgs e)   // aktualizacja danych
+        private void KeyDown_Event(object sender, KeyEventArgs e)   // data update
         {
 
 
-            Key.Checkclear(sizeBoard);   // sprawdzenie czy sa puste pola 
+            Key.Checkclear(sizeBoard);   // checking if there are empty fields
 
             if (Key.board_clear == false)
             {
@@ -151,44 +151,44 @@ namespace GUI_2048
                 this.Close();
             }
 
-            Key.CheckKey(sizeBoard, e);    // sprawdzanie klawisza i wykonanie ruchu 
+            Key.CheckKey(sizeBoard, e);    // checking clicks and moving
 
-            if (Key.check_move == true)         // Jesli wykonano jakis ruch
+            if (Key.check_move == true)
             {
-                Board.RandValue();    // losuje wartość 2 lub 4
-                Board.RandCoordinates(sizeBoard);     // losowanie wspolrzednych nowej liczby      
+                Board.RandValue();    // draws a value of 2 or 4
+                Board.RandCoordinates(sizeBoard);     // drawing of coordinates of a new number      
             }
 
-            Board.ConvertBytes(sizeBoard);   // zamiana liczb na bajty
+            Board.ConvertBytes(sizeBoard);   // conversion of numbers into bytes
 
-            UpdateBoard();      // Wprowadź nowe wartości do tablicy
-            CheckAchiv(sizeBoard);      // wyswietlenie Achivmenta
+            UpdateBoard();      // Enter new values ​​into the table
+            CheckAchiv(sizeBoard);      // displaying achievement
 
         }
 
 
-        public Plansza4x4()     // Inicjalizacja GUI
+        public Board4x4()     // initialization GUI
         {
             InitializeComponent();
 
             sizeBoard = 3;
- 
-            User.CreateBoard(sizeBoard);     // wypełnienie tablicy zerami
+
+            User.CreateBoard(sizeBoard);     // filling the table with zeros
             for (int i = 0; i < 2; i++)
             {
-                Board.RandValue();    // losuje wartość 2 lub 4
-                Board.RandCoordinates(sizeBoard);     // losowanie wspolrzednych nowej liczby
+                Board.RandValue();    // draws a value of 2 or 4
+                Board.RandCoordinates(sizeBoard);     // drawing of coordinates of a new number   
             }
 
-            Board.ConvertBytes(sizeBoard);   // zamiana liczba na bajty
-            UpdateBoard();    // wyswietlenie zawartosci tablicy
+            Board.ConvertBytes(sizeBoard);   // conversion of numbers into bytes
+            UpdateBoard();    // displaying the content of the table
 
         }
 
-        private void Wyjscie(object sender, RoutedEventArgs e)
+        private void exit(object sender, RoutedEventArgs e)
         {
-            MainWindow wyjscie = new MainWindow();
-            wyjscie.Show();
+            MainWindow exit = new MainWindow();
+            exit.Show();
             this.Close();
         }
 

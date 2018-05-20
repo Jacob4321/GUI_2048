@@ -28,8 +28,7 @@
             <ColumnDefinition Width="200"/>
             <ColumnDefinition Width="125"/>
         </Grid.ColumnDefinitions>
-      <!--  <TextBlock Grid.Column="1" Foreground="DarkGreen" FontSize="30" HorizontalAlignment="Left" Margin="00,80,0,0" TextWrapping="Wrap" TextAlignment="Center" VerticalAlignment="Top" Width="200"><Run Text="2048 = "/><Span><Run Text="2"/></Span><Span Typography.Variants="Superscript"><Run Text="11"/></Span><LineBreak/><Run/></TextBlock> -->
-        <Button Click="start" Grid.Column="1" Margin="0,0,0,0" Grid.Row="1" Width="200" Height="40" FontSize="20" HorizontalAlignment="Left" RenderTransformOrigin="0.228,0.661" Foreground="White">
+        <Button Click="ChoiceBoard" Grid.Column="1" Margin="0,0,0,0" Grid.Row="1" Width="200" Height="40" FontSize="20" HorizontalAlignment="Left" RenderTransformOrigin="0.228,0.661" Foreground="White">
             <Button.ContextMenu>
                 <ContextMenu/>
             </Button.ContextMenu>
@@ -37,7 +36,7 @@
                 <ImageBrush ImageSource="/Images/MainWindow_button_start.png"/>
             </Button.Background>
         </Button>
-        <Button Click="sterowanie" Grid.Column="1" Margin="0,0,0,0" Grid.Row="3" Width="200" Height="40" FontSize="20" HorizontalAlignment="Left" RenderTransformOrigin="0.228,0.661">
+        <Button Click="Control" Grid.Column="1" Margin="0,0,0,0" Grid.Row="3" Width="200" Height="40" FontSize="20" HorizontalAlignment="Left" RenderTransformOrigin="0.228,0.661">
             <Button.ContextMenu>
                 <ContextMenu/>
             </Button.ContextMenu>
@@ -45,7 +44,7 @@
                 <ImageBrush ImageSource="/Images/MainWindow_button_sterowanie.png"/>
             </Button.Background>
         </Button>
-        <Button Click="informacje" Grid.Column="1" Margin="0,0,0,0" Grid.Row="5" Width="200" Height="40" FontSize="20" HorizontalAlignment="Left" RenderTransformOrigin="0.228,0.661">
+        <Button Click="Information" Grid.Column="1" Margin="0,0,0,0" Grid.Row="5" Width="200" Height="40" FontSize="20" HorizontalAlignment="Left" RenderTransformOrigin="0.228,0.661">
             <Button.ContextMenu>
                 <ContextMenu/>
             </Button.ContextMenu>
@@ -53,7 +52,7 @@
                 <ImageBrush ImageSource="/Images/MainWindow_button_informacje.png"/>
             </Button.Background>
         </Button>
-        <Button Click="wyjscie" Grid.Column="1" Margin="0,0,0,0" Grid.Row="7" Width="200" Height="40" FontSize="20" HorizontalAlignment="Left" RenderTransformOrigin="0.228,0.661">
+        <Button Click="exit" Grid.Column="1" Margin="0,0,0,0" Grid.Row="7" Width="200" Height="40" FontSize="20" HorizontalAlignment="Left" RenderTransformOrigin="0.228,0.661">
             <Button.ContextMenu>
                 <ContextMenu/>
             </Button.ContextMenu>

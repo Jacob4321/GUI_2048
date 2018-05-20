@@ -22,14 +22,14 @@ namespace GUI_2048
         public bool board_clear = false;
         public int falsee = 0;
 
-        public int check_y = 0;                  // sprawdzenie po zmiennej y
-        public int check_x = 0;                  // sprawdzenie po zmiennej x
+        public int check_y = 0;                  // check after the variable y
+        public int check_x = 0;                  // check after the variable x
 
-        public int check_next_y = 0;            // zmenna pomocnicza
-        public int check_next_x = 0;            // zmenna pomocnicza
-        public int check_priev_x = 0;            // zmenna pomocnicza
-        public int check_priev_y = 0;            // zmenna pomocnicza
-        
+        public int check_next_y = 0;            // variable helpful
+        public int check_next_x = 0;            // variable helpful
+        public int check_priev_x = 0;            // variable helpful
+        public int check_priev_y = 0;            // variable helpful
+
 
         User User = new User();
 
@@ -37,7 +37,7 @@ namespace GUI_2048
         {
             board_clear = false;
 
-            // Sprawdzenie czy sa puste pola
+            // Checking if there are empty fields
             for (int i = 0; i <= _sizeBoard; i++)
             {
                 for (int j = 0; j <= _sizeBoard; j++)
@@ -52,7 +52,7 @@ namespace GUI_2048
         }
 
 
-        
+
 
         public void CheckKey(int _sizeBoard, KeyEventArgs _key1)
         {
@@ -66,78 +66,74 @@ namespace GUI_2048
                     {
                         check_next_y = check_y + 1;
 
-                        // sprawdzamy wiersze od pierwszego do ostatniego
+                        // we check the rows from first to last
                         for (int max = check_next_y; max <= _sizeBoard; max++)
                         {
                             falsee = 0;
-                            // jezeli 1 i ostatni wiersz jest taki sam  i czy ostatni nie jest zerem
+                            // if the first and last lines are the same and if the last one is not zero
                             if (User.board[check_y, check_x] == User.board[max, check_x] && User.board[max, check_x] != User.emptyy)
                             {
-                                // sprawdzamy elementy tablicy miedzy 2 a ostatnim wierszem
-                                //++check_next_y;
+                                // we check the elements between the second and last line
                                 for (int i = check_next_y; i < max; i++)
                                 {
-                                    // jezeli nie jest puste
+                                    // if it is not empty
                                     if (User.board[i, check_x] != User.emptyy)
                                     {
                                         falsee = 1;
                                     }
                                 }
-                                //check_next_y--;
-                                // jezeli srodkowe wiersze sa puste
+                                // if the middle rows are empty
                                 if (falsee == User.emptyy)
                                 {
-                                    // dodanie komorki wiersza 1 i ostatniego
+                                    // adding the first and last row cell
                                     User.board[check_y, check_x] += User.board[max, check_x];
-                                    // ostatnia komorke wiersza wypelniamy zerem
+                                    // we fill the last cell of the line with zero
                                     User.board[max, check_x] = User.emptyy;
-                                    // potwierdzenie ze ruch zostal wykonany
+                                    // confirmation that the move was made
                                     check_move = true;
                                 }
                             }
-                            // jezeli ostatni wiersz nie jest zerem a pierwszy jest pusty
-                            else if(User.board[max, check_x] != User.emptyy && User.board[check_y, check_x] == User.emptyy)
+                            // if the last line is not zero and the first is empty
+                            else if (User.board[max, check_x] != User.emptyy && User.board[check_y, check_x] == User.emptyy)
                             {
-                                // sprawdzamy elementy tablicy miedzy 2 a ostatnim wierszem
-                                //++check_next_y;
+                                // we check the elements of the array between the second and the last row
                                 for (int i = check_next_y; i < max; i++)
                                 {
-                                    // jezeli nie jest puste
+                                    // if it is not empty
                                     if (User.board[i, check_x] != User.emptyy)
                                     {
                                         falsee = 1;
                                     }
                                 }
-                                //check_next_y--;
-                                // jezeli srodkowe wiersze sa puste
+                                // if the middle rows are empty
                                 if (falsee == User.emptyy)
                                 {
-                                    // wstaw zawartosc wiersza ostatniego do pierwszego wiersza
+                                    // insert the contents of the last row to the first row
                                     User.board[check_y, check_x] += User.board[max, check_x];
-                                    // ostatni wiersz wypelnij zerem
+                                    // fill the last line with zero
                                     User.board[max, check_x] = User.emptyy;
-                                    // potwierdzenie ze ruch zostal wykonany
+                                    // confirmation that the move was made
                                     check_move = true;
                                 }
                             }
-                            // jezeli pierwszy wiersz i nastepny sa takie same i czy następny nie jest zerem
-                            else if(User.board[check_y, check_x] == User.board[check_next_y, check_x] && User.board[check_next_y, check_x] != User.emptyy)
+                            // if the first row and the next row are the same and if the next one is not zero
+                            else if (User.board[check_y, check_x] == User.board[check_next_y, check_x] && User.board[check_next_y, check_x] != User.emptyy)
                             {
-                                // dodaj pierszy i kolejny wiersz
+                                // add first and next line
                                 User.board[check_y, check_x] += User.board[check_next_y, check_x];
-                                // kolejny wiersz wypelnij zerem
+                                // fill the next line with zero
                                 User.board[check_next_y, check_x] = User.emptyy;
-                                // potwierdzenie ze ruch zostal wykonany
+                                // confirmation that the move was made
                                 check_move = true;
                             }
-                            // jezeli pierwszy wiersz jest pusty a nastepny nie jest
-                            else if(User.board[check_y, check_x] == 0 && User.board[check_next_y, check_x] != User.emptyy)
+                            // if the first row is empty and the next is not
+                            else if (User.board[check_y, check_x] == 0 && User.board[check_next_y, check_x] != User.emptyy)
                             {
-                                //wstaw zawartosc wiersza nastepnego w miejsce pierwszego
+                                // insert the content of the next row in place of the first one
                                 User.board[check_y, check_x] += User.board[check_next_y, check_x];
-                                // nastepny wiersz wypelni zerem
+                                // the next row will fill with zero
                                 User.board[check_next_y, check_x] = User.emptyy;
-                                // potwierdzenie ze ruch zostal wykonany
+                                // confirmation that the move was made
                                 check_move = true;
                             }
                         }
@@ -153,85 +149,71 @@ namespace GUI_2048
                     {
                         check_next_x = check_x + 1;
 
-                        // sprawdzamy kolumny od pierwszego do ostatniego
+                        // we check the columns from first to last
                         for (int max = check_next_x; max <= _sizeBoard; max++)
                         {
                             falsee = 0;
-                            // jezeli 1 i ostatna kolumna jest taka sama i czy ostatna nie jest zerem
+                            // if the first and last column is the same and if the last one is not zero
                             if (User.board[check_y, check_x] == User.board[check_y, max] && User.board[check_y, max] != User.emptyy)
                             {
-                                // sprawdzamy elementy tablicy miedzy 2 a ostatnia kolumna
-                                //++check_next_x;
+                                // we check the elements of the array between the second and last column
                                 for (int i = check_next_x; i < max; i++)
                                 {
-                                    // jezeli nie jest puste
                                     if (User.board[check_y, i] != User.emptyy)
                                     {
                                         falsee = 1;
                                     }
                                 }
-                                //check_next_x--;
-                                // jezeli srodkowe kolumny sa puste
+                                // if the middle columns are empty
                                 if (falsee == User.emptyy)
                                 {
-                                    // dodanie komorki kolumny 1 i ostatniej
+                                    // adding the cell of the first and last columns
                                     User.board[check_y, check_x] += User.board[check_y, max];
-                                    // ostatnia komorke kolumny wypelniamy zerem
                                     User.board[check_y, max] = User.emptyy;
-                                    // potwierdzenie ze ruch zostal wykonany
                                     check_move = true;
                                 }
                             }
-                            // jezeli ostatna kolumna nie jest zerem a pierwsza jest pusta
+                            // if the last column is not zero and the first column is empty
                             else if (User.board[check_y, max] != User.emptyy && User.board[check_y, check_x] == User.emptyy)
                             {
-                                // sprawdzamy elementy tablicy miedzy 2 a ostatnia kolumna
-                                //++check_next_x;
+                                // we check the elements of the array between the second and last column
                                 for (int i = check_next_x; i < max; i++)
                                 {
-                                    // jezeli nie jest puste
                                     if (User.board[check_y, i] != User.emptyy)
                                     {
                                         falsee = 1;
                                     }
                                 }
-                                //check_next_x--;
-                                // jezeli srodkowe kolumny sa puste
+                                // if the middle columns are empty
                                 if (falsee == User.emptyy)
                                 {
-                                    // wstaw zawartosc kolumny ostatniej do pierwszej kolumny
+                                    // insert the contents of the last column into the first column
                                     User.board[check_y, check_x] += User.board[check_y, max];
-                                    // ostatna kolumne wypelnij zerem
                                     User.board[check_y, max] = User.emptyy;
-                                    // potwierdzenie ze ruch zostal wykonany
                                     check_move = true;
                                 }
                             }
-                            // jezeli pierwsza kolumna i nastepna sa takie same i czy następna nie jest zerem
+                            // if the first column and the next column are the same and if the next one is not zero
                             else if (User.board[check_y, check_x] == User.board[check_y, check_next_x] && User.board[check_y, check_next_x] != User.emptyy)
                             {
-                                // dodaj piersza i kolejna kolumne
+                                // add first and next columns
                                 User.board[check_y, check_x] += User.board[check_y, check_next_x];
-                                // kolejna kolumne wypelnij zerem
                                 User.board[check_y, check_next_x] = User.emptyy;
-                                // potwierdzenie ze ruch zostal wykonany
                                 check_move = true;
                             }
-                            // jezeli pierwsza kolumna jest pusta a nastepna nie jest
+                            // if the first column is empty and the next column is not
                             else if (User.board[check_y, check_x] == 0 && User.board[check_y, check_next_x] != User.emptyy)
                             {
-                                //wstaw zawartosc kolumny nastepnej w miejsce pierwszej
+                                // insert the contents of the next column in place of the first one
                                 User.board[check_y, check_x] += User.board[check_y, check_next_x];
-                                // nastepny wiersz wypelni zerem
                                 User.board[check_y, check_next_x] = User.emptyy;
-                                // potwierdzenie ze ruch zostal wykonany
                                 check_move = true;
                             }
                         }
                     }
                 }
             }
-          
+
 
 
             if (_key1.Key == System.Windows.Input.Key.D || _key1.Key == System.Windows.Input.Key.Right)
@@ -242,78 +224,64 @@ namespace GUI_2048
                     {
                         check_priev_x = check_x - 1;
 
-                        // sprawdzamy kolumny od ostatniego do pierwszego
+                        // we check the columns from last to first
                         for (int max = check_priev_x; max >= 0; max--)
                         {
                             falsee = 0;
-                            // jezeli ostatnia i pierwsza kolumna jest taka sama i czy pierwsza nie jest zerem
+                            // if the last and first column is the same and if the first one is not zero
                             if (User.board[check_y, check_x] == User.board[check_y, max] && User.board[check_y, max] != User.emptyy)
                             {
-                                // sprawdzamy elementy tablicy miedzy 2 a ostatnia kolumna
-                                //--check_priev_x;
+                                // we check the elements of the array between the second and last column
                                 for (int i = check_priev_x; i < max; i--)
                                 {
-                                    // jezeli nie jest puste
                                     if (User.board[check_y, i] != User.emptyy)
                                     {
                                         falsee = 1;
                                     }
                                 }
-                                //check_priev_x++;
-                                // jezeli srodkowe kolumny sa puste
+                                // if the middle columns are empty
                                 if (falsee == User.emptyy)
                                 {
-                                    // dodanie komorki kolumny ostatniej i pierwszej
+                                    // adding the last and first column cell
                                     User.board[check_y, check_x] += User.board[check_y, max];
-                                    // pierwsza komorke kolumny wypelniamy zerem
                                     User.board[check_y, max] = User.emptyy;
-                                    // potwierdzenie ze ruch zostal wykonany
                                     check_move = true;
                                 }
                             }
-                            // jezeli pierwsza kolumna nie jest zerem a ostatnia jest pusta
+                            // if the first column is not zero and the last column is empty
                             else if (User.board[check_y, max] != User.emptyy && User.board[check_y, check_x] == User.emptyy)
                             {
-                                // sprawdzamy elementy tablicy miedzy 2 a ostatnia kolumna
-                                //--check_priev_x;
+                                // we check the elements of the table between the second and the last column
                                 for (int i = check_priev_x; i < max; i--)
                                 {
-                                    // jezeli nie jest puste
                                     if (User.board[check_y, i] != User.emptyy)
                                     {
                                         falsee = 1;
                                     }
                                 }
-                                //check_priev_x++;
-                                // jezeli srodkowe kolumny sa puste
+                                // if the middle columns are empty
                                 if (falsee == User.emptyy)
                                 {
-                                    // wstaw zawartosc kolumny pierwszej do ostatniej kolumny
+                                    // insert the contents of the first column into the last column
                                     User.board[check_y, check_x] += User.board[check_y, max];
-                                    // pierwsza kolumne wypelnij zerem
                                     User.board[check_y, max] = User.emptyy;
-                                    // potwierdzenie ze ruch zostal wykonany
                                     check_move = true;
                                 }
                             }
-                            // jezeli ostatnia kolumna i poprzednia sa takie same i czy poprzednia nie jest zerem
+                            // if the last column and the previous one are the same and if the previous one is not zero
                             else if (User.board[check_y, check_x] == User.board[check_y, check_priev_x] && User.board[check_y, check_priev_x] != User.emptyy)
                             {
-                                // dodaj ostatnia i poprzednia kolumne
+                                // add the last and previous columns
                                 User.board[check_y, check_x] += User.board[check_y, check_priev_x];
-                                // poprzednia kolumne wypelnij zerem
                                 User.board[check_y, check_priev_x] = User.emptyy;
-                                // potwierdzenie ze ruch zostal wykonany
                                 check_move = true;
                             }
-                            // jezeli ostatnia kolumna jest pusta a poprzednia nie jest
+                            // if the last column is empty and the previous column is not
                             else if (User.board[check_y, check_x] == 0 && User.board[check_y, check_priev_x] != User.emptyy)
                             {
-                                //wstaw zawartosc kolumny poprzedniej w miejsce ostatniej
+                                // insert the contents of the previous column in place of the last one
                                 User.board[check_y, check_x] += User.board[check_y, check_priev_x];
-                                // poprzedni wiersz wypelni zerem
                                 User.board[check_y, check_priev_x] = User.emptyy;
-                                // potwierdzenie ze ruch zostal wykonany
                                 check_move = true;
                             }
                         }
@@ -331,78 +299,64 @@ namespace GUI_2048
                     {
                         check_priev_y = check_y - 1;
 
-                        // sprawdzamy wiersze od ostatniego do pierwszego
+                        // we check the rows from last to first
                         for (int max = check_priev_y; max >= 0; max--)
                         {
                             falsee = 0;
-                            // jezeli ostatni i pierwszy wiersz jest taki sam  i czy pierwszy nie jest zerem
+                            // if the last and first row is the same and if the first is not zero
                             if (User.board[check_y, check_x] == User.board[max, check_x] && User.board[max, check_x] != User.emptyy)
                             {
-                                // sprawdzamy elementy tablicy miedzy ostatnim a 2 wierszem
-                                //++check_next_y;
+                                // we check the elements of the array between the last and the second row
                                 for (int i = check_priev_y; i < max; i--)
                                 {
-                                    // jezeli nie jest puste
                                     if (User.board[i, check_x] != User.emptyy)
                                     {
                                         falsee = 1;
                                     }
                                 }
-                                //check_next_y--;
-                                // jezeli srodkowe wiersze sa puste
+                                // if the middle rows are empty
                                 if (falsee == User.emptyy)
                                 {
-                                    // dodanie komorki wiersza ostatniego i pierwszego
+                                    // adding the last and first row of cells
                                     User.board[check_y, check_x] += User.board[max, check_x];
-                                    // pierwsza komorke wiersza wypelniamy zerem
                                     User.board[max, check_x] = User.emptyy;
-                                    // potwierdzenie ze ruch zostal wykonany
                                     check_move = true;
                                 }
                             }
-                            // jezeli pierwszy wiersz nie jest zerem a ostatni jest pusty
+                            // if the first row is not zero and the last row is empty
                             else if (User.board[max, check_x] != User.emptyy && User.board[check_y, check_x] == User.emptyy)
                             {
-                                // sprawdzamy elementy tablicy miedzy 2 a ostatnim wierszem
-                                //++check_next_y;
+                                // we check the elements of the array between the second and the last row
                                 for (int i = check_priev_y; i < max; i--)
                                 {
-                                    // jezeli nie jest puste
                                     if (User.board[i, check_x] != User.emptyy)
                                     {
                                         falsee = 1;
                                     }
                                 }
-                                //check_next_y--;
-                                // jezeli srodkowe wiersze sa puste
+                                // if the middle rows are empty
                                 if (falsee == User.emptyy)
                                 {
-                                    // wstaw zawartosc wiersza pierwszego do ostatniego wiersza
+                                    // insert the contents of the first row to the last row
                                     User.board[check_y, check_x] += User.board[max, check_x];
-                                    // pierwszy wiersz wypelnij zerem
                                     User.board[max, check_x] = User.emptyy;
-                                    // potwierdzenie ze ruch zostal wykonany
                                     check_move = true;
                                 }
                             }
-                            // jezeli ostatni wiersz i poprzedni sa takie same i czy poprzedni nie jest zerem
+                            // if the last row and the previous row are the same and if the previous one is not zero
                             else if (User.board[check_y, check_x] == User.board[check_priev_y, check_x] && User.board[check_priev_y, check_x] != User.emptyy)
                             {
-                                // dodaj ostatni i poprzedni wiersz
+                                // add the last and previous row
                                 User.board[check_y, check_x] += User.board[check_priev_y, check_x];
-                                // poprzedni wiersz wypelnij zerem
                                 User.board[check_priev_y, check_x] = User.emptyy;
-                                // potwierdzenie ze ruch zostal wykonany
                                 check_move = true;
                             }
-                            // jezeli ostatni wiersz jest pusty a poprzedni nie jest
+                            // if the last row is empty and the previous one is not
                             else if (User.board[check_y, check_x] == 0 && User.board[check_priev_y, check_x] != User.emptyy)
                             {
-                                //wstaw zawartosc wiersza poprzedniego w miejsce ostatniego
+                                // insert the content of the previous line in place of the last one
                                 User.board[check_y, check_x] += User.board[check_priev_y, check_x];
-                                // poprzedni wiersz wypelni zerem
                                 User.board[check_priev_y, check_x] = User.emptyy;
-                                // potwierdzenie ze ruch zostal wykonany
                                 check_move = true;
                             }
                         }
@@ -411,7 +365,7 @@ namespace GUI_2048
             }
 
 
-            
+
 
 
         }
