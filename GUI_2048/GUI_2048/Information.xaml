@@ -11,7 +11,7 @@
             <ImageBrush ImageSource="/Images/informacje_background_v2.png" TileMode="FlipXY"/>
         </Grid.Background>
         <Grid.RowDefinitions>
-            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/> 
             <RowDefinition Height="0"/>
             <RowDefinition Height="246"/>
             <RowDefinition Height="9"/>

@@ -18,7 +18,7 @@ namespace GUI_2048
     /// <summary>
     /// Interaction logic for Board4x4.xaml
     /// </summary>
-    public partial class Board8x8 : Window
+    public partial class Board8x8 : Window 
     {
         public System.Windows.Media.SolidColorBrush ChangeBackground(int a, int b)
         {

@@ -25,7 +25,7 @@ namespace GUI_2048
         }
 
         private void exit(object sender, RoutedEventArgs e)
-        {
+        { 
             MainWindow exit = new MainWindow();
             exit.Show();
             this.Close();

@@ -9,7 +9,7 @@ namespace GUI_2048
 
     class Board 
     {
-       
+        
         public int randNumber = 0;
         public int rand1 = 2;      // the first random number
         public int rand2 = 4;      // the second random number

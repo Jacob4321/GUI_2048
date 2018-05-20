@@ -27,7 +27,7 @@ namespace GUI_2048
         {
             Board4x4 Board4x4 = new Board4x4();
             Board4x4.Show();
-            this.Close();
+            this.Close(); 
         }
 
         private void Board6x6(object sender, RoutedEventArgs e)

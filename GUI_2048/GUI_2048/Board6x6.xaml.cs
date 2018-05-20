@@ -22,7 +22,7 @@ namespace GUI_2048
     {
         public System.Windows.Media.SolidColorBrush ChangeBackground(int a, int b)
         {
-            switch (User.board[a, b])
+            switch (User.board[a, b]) 
             {
                 case 0: return (SolidColorBrush)(new BrushConverter().ConvertFrom("#ffffff"));
                 case 2: return (SolidColorBrush)(new BrushConverter().ConvertFrom("#ffe8cc"));

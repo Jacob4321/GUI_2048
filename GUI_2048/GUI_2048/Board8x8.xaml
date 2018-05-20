@@ -11,7 +11,7 @@
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="/Images/Plansza8x8_background.png" TileMode="FlipXY"/>
-        </Grid.Background>
+        </Grid.Background> 
         <Grid.RowDefinitions>
             <RowDefinition Height="20"/>
             <RowDefinition Height="50"/>

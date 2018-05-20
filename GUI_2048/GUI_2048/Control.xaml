@@ -10,7 +10,7 @@
         <Grid.Background>
             <ImageBrush ImageSource="/Images/Sterowanie_background.png" TileMode="FlipXY"/>
         </Grid.Background>
-        <Grid.RowDefinitions>
+        <Grid.RowDefinitions> 
             <RowDefinition Height="146"/>
             <RowDefinition Height="24"/>
             <RowDefinition Height="10"/>

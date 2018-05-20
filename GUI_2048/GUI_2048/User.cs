@@ -21,7 +21,7 @@ namespace GUI_2048
             for (int i = 0; i <= _sizeBoard; i++)
             {
                 for (int j = 0; j <= _sizeBoard; j++)
-                {
+                { 
                     board[i, j] = emptyy;
                 }
             }

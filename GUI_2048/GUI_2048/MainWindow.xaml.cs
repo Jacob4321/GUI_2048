@@ -35,7 +35,7 @@ namespace GUI_2048
         }
 
         private void Control(object sender, RoutedEventArgs e)
-        {
+        { 
             Control Control = new Control();
             Control.Show();
             this.Close();

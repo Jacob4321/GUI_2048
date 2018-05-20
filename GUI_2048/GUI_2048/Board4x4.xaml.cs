@@ -19,7 +19,7 @@ namespace GUI_2048
     /// Interaction logic for Board4x4.xaml
     /// </summary>
     public partial class Board4x4 : Window
-    {
+    { 
 
         // filling the background with color depending on the number in the field
         public System.Windows.Media.SolidColorBrush ChangeBackground(int a, int b)

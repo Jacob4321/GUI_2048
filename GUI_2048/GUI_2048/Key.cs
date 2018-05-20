@@ -22,7 +22,7 @@ namespace GUI_2048
         public bool board_clear = false;
         public int falsee = 0;
 
-        public int check_y = 0;                  // check after the variable y
+        public int check_y = 0;                  // check after the variable y 
         public int check_x = 0;                  // check after the variable x
 
         public int check_next_y = 0;            // variable helpful
